@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>To do list</h1>
+    <form action="/create-task" method="get">
+        <label for="fname">Title</label>
+        <input type="text" id="fname" name="title">
+        <label for="fname"> Content</label>
+        <input type="text" id="fname" name="content">
+        <!-- submit -->
+        <input type="submit" value="Submit">
+    </form>
+    <div class="main-task">
+
+        <h3>All task</h3>
+        <h3>Completed task</h3>
+    </div>
+    <table>
+        <% for(var i=0; i < tasks.length; i++) { %>
+            <tr>
+                <td class="title">
+                    <label class="container">
+                        <%= tasks[i].title %>
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                    </label>
+
+                </td>
+            </tr>
+            <td>
+                <%= tasks[i].content %>
+            </td>
+            </tr>
+            <% } %>
+    </table>
+
+
+</body>
+
+</html>

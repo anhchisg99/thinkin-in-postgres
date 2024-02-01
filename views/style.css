@@ -1,0 +1,16 @@
+.main-task{
+    justify-content: space-between;
+    max-width: 500px;
+    /* flex-direction: row; */
+    /* border:1px solid red; */
+    display: flex;
+
+}
+.main-task h3{
+    width: 40%;
+    background-color: tomato;
+}
+.title{
+    color:red;
+    font-size: large;
+}
